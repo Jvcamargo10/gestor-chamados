@@ -1,0 +1,51 @@
+/* Tokens do design system. Todo componente usa estas variáveis; nenhum valor de cor fica solto. */
+:root {
+  --cor-fundo: #f6f6f8;
+  --cor-superficie: #ffffff;
+  --cor-texto: #17161c;
+  --cor-texto-suave: #5d5b68;
+  --cor-borda: #e2e1e8;
+  --cor-marca: #5b3fd6;
+  --cor-marca-suave: #ece8fd;
+  --cor-sucesso: #166534;
+  --cor-sucesso-suave: #dcfce7;
+  --cor-alerta: #8a5a00;
+  --cor-alerta-suave: #fff4d6;
+  --cor-perigo: #a3261b;
+  --cor-perigo-suave: #fde8e6;
+  --cor-neutra-suave: #eeeef2;
+
+  --fonte-titulo: 'Familjen Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --fonte-texto: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+  --fonte-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  --raio-p: 6px;
+  --raio-m: 10px;
+  --raio-g: 14px;
+  --espaco-1: 4px;
+  --espaco-2: 8px;
+  --espaco-3: 12px;
+  --espaco-4: 16px;
+  --espaco-5: 24px;
+  --espaco-6: 32px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #121116;
+    --cor-superficie: #1b1a21;
+    --cor-texto: #eeedf2;
+    --cor-texto-suave: #a7a4b4;
+    --cor-borda: #2d2b36;
+    --cor-marca: #a996ff;
+    --cor-marca-suave: #2a2448;
+    --cor-sucesso: #86efac;
+    --cor-sucesso-suave: #14301d;
+    --cor-alerta: #f2c35b;
+    --cor-alerta-suave: #3a2f12;
+    --cor-perigo: #ff8a7d;
+    --cor-perigo-suave: #3d1d1a;
+    --cor-neutra-suave: #26252d;
+    color-scheme: dark;
+  }
+}

@@ -1,0 +1,53 @@
+@import './ui/tokens.css';
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--cor-fundo); color: var(--cor-texto); font-family: var(--fonte-texto); font-size: 16px; line-height: 1.55; }
+a { color: var(--cor-marca); }
+h1 { font-family: var(--fonte-titulo); font-size: clamp(28px, 4vw, 38px); line-height: 1.15; margin: 0 0 var(--espaco-2); }
+.lead { color: var(--cor-texto-suave); margin: 0 0 var(--espaco-5); }
+.muted { color: var(--cor-texto-suave); }
+.erro { color: var(--cor-perigo); background: var(--cor-perigo-suave); padding: var(--espaco-2) var(--espaco-3); border-radius: var(--raio-p); }
+
+.faixa-demo { background: var(--cor-marca-suave); font-size: 14px; padding: 8px 16px; text-align: center; }
+.topo { max-width: 1120px; margin: 0 auto; padding: 18px 16px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; }
+.marca { font: 700 19px var(--fonte-titulo); color: var(--cor-texto); text-decoration: none; display: inline-flex; gap: 10px; align-items: center; }
+.marca-icone { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 7px; background: var(--cor-marca); color: #fff; font-size: 16px; }
+.topo nav { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.topo nav a { color: var(--cor-texto-suave); font-weight: 600; text-decoration: none; }
+.topo nav a:hover { color: var(--cor-texto); }
+.conteudo { max-width: 1120px; margin: 0 auto; padding: 8px 16px 48px; }
+.rodape { max-width: 1120px; margin: 0 auto; padding: 24px 16px 40px; color: var(--cor-texto-suave); font-size: 14px; border-top: 1px solid var(--cor-borda); }
+
+.cabecalho-pagina { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: var(--espaco-2); }
+.indicadores { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: var(--espaco-5); }
+.filtros { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 12px; align-items: end; margin-bottom: var(--espaco-4); }
+@media (max-width: 760px) { .filtros { grid-template-columns: 1fr; } }
+
+.lista-chamados { list-style: none; margin: 0; padding: 0; }
+.linha-chamado { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 14px 8px;
+  border-top: 1px solid var(--cor-borda); color: var(--cor-texto); text-decoration: none; }
+.linha-chamado:hover { background: var(--cor-fundo); }
+.linha-chamado .id { font-family: var(--fonte-mono); color: var(--cor-texto-suave); }
+.linha-chamado .titulo { display: flex; flex-direction: column; min-width: 0; }
+.selos { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.cabecalho-pagina .selos { justify-content: flex-start; }
+@media (max-width: 760px) { .linha-chamado { grid-template-columns: 40px 1fr; } .linha-chamado .selos { grid-column: 2; justify-content: flex-start; } }
+
+.formulario { display: grid; gap: var(--espaco-4); }
+.formulario-chamado { max-width: 720px; }
+.duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: var(--espaco-4); }
+@media (max-width: 600px) { .duas-colunas { grid-template-columns: 1fr; } }
+.acoes { display: flex; flex-wrap: wrap; gap: var(--espaco-2); }
+
+.detalhe { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: var(--espaco-4); align-items: start; margin-top: var(--espaco-4); }
+@media (max-width: 860px) { .detalhe { grid-template-columns: 1fr; } }
+.coluna { display: grid; gap: var(--espaco-4); }
+.descricao { white-space: pre-wrap; margin-top: 0; }
+.ficha { display: grid; grid-template-columns: max-content 1fr; gap: 6px 20px; margin: 0; }
+.ficha dt { color: var(--cor-texto-suave); }
+.ficha dd { margin: 0; font-weight: 600; }
+.historico { list-style: none; margin: 0; padding: 0 0 0 16px; border-left: 2px solid var(--cor-borda); display: grid; gap: 14px; }
+.historico li { display: grid; gap: 2px; position: relative; }
+.historico li::before { content: ''; position: absolute; left: -22px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--cor-borda); }
+.historico li[data-tipo='status']::before { background: var(--cor-marca); }
+.historico li .muted { font-size: 13px; }
